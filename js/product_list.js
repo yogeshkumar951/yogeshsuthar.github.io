@@ -48,29 +48,27 @@ $(document).ready(function() {
     console.log('product: ', product)
 
     let shortName = product.name;
-    if (shortName && shortName.length > 20) {
-      shortName = shortName.substring(0, 20) + "...";
-    }
+    const shareText = `${product.name}\n${product.link}`;
+    const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+
+    // if (shortName && shortName.length > 20) {
+    //   shortName = shortName.substring(0, 20) + "...";
+    // }
     const html_code = `
         <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="box">
                 <div class="option_container">
                     <div class="options">
-                    <a href="${product.link}" class="option1" target="_blank">
+                  <a href="${product.link}" class="option1" target="_blank" rel="noopener noreferrer">
                     Preview
-                    </a>
-                    <!-- <a href="" class="option2">
-                    Buy Now
-                    </a> -->
-                    </div>
+                  </a>
+                  <a href="${whatsappLink}" class="option2" target="_blank" rel="noopener noreferrer">
+                    Share
+                  </a>
+                </div>
                 </div>
                 <div class="img-box">
                     <img src="${product.image}" alt="">
-                </div>
-                <div class="detail-box">
-                    <h5 title="${product.name}">
-                        ${shortName || ''}
-                    </h5>
                 </div>
                 
             </div>
