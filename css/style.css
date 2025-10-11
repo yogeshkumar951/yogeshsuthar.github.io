@@ -363,7 +363,7 @@ a:focus {
     position: relative;
     margin-top: 25px;
     padding: 35px 35px;
-    background-color: #f7f8f9;
+    /* background-color: #f7f8f9; */
     -webkit-transition: all .3s;
     transition: all .3s;
     overflow: hidden;
@@ -386,7 +386,7 @@ a:focus {
 
 .product_section .box .img-box img {
   max-width: 100%;
-  max-height: 160px;
+  max-height: 280px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -1124,3 +1124,44 @@ http://kute-themes.com/html/boutique/html/index.html
 https://template.hasthemes.com/noraure/noraure/index.html
 https://preview.hasthemes.com/xoss-preview/xoss/index.html
 
+
+
+.product_card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.product_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.product_title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product_description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product_price {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.product_actions .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.product_extra_info p {
+    font-size: 14px;
+    color: #777;
+}
